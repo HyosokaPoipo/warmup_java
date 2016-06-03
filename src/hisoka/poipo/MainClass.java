@@ -10,11 +10,22 @@ public class MainClass {
 		//frontBack string
 		System.out.println(frontBack1("Hisoka"));
 		System.out.println(frontBack1(""));;
+		
+		System.out.println(delDel("adelHello"));
+		System.out.println(delDel("ade"));
 	}
+	
+	public static String delDel(String str)
+	{		
+		if(str.length() <= 3) return str;
+		else if(str.substring(1, 4).equalsIgnoreCase("del"))return str.replace("del", "");
+		else return str;
+	}
+	
 	
 	public static boolean monkeyTrouble(boolean aSmile, boolean bSmile)
 	{
-		boolean result = aSmile ^ bSmile;
+		boolean result = !(aSmile ^ bSmile);
 		return result;
 	}
 	
