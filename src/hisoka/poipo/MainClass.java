@@ -12,7 +12,11 @@ public class MainClass {
 		System.out.println(frontBack1(""));;
 	}
 	
-	
+	public static boolean monkeyTrouble(boolean aSmile, boolean bSmile)
+	{
+		boolean result = aSmile ^ bSmile;
+		return result;
+	}
 	
 	public static String frontBack1(String str)
 	{
