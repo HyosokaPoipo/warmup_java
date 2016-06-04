@@ -15,6 +15,20 @@ public class MainClass {
 		System.out.println(delDel("ade"));
 	}
 	
+	
+	public static String stringTimes(String str, int n)
+	{
+		String result="";
+		while(n>0)
+		{
+			result += str;
+			n -= 1;
+		}
+		return result;
+	}
+	
+	
+	
 	public static String delDel(String str)
 	{		
 		if(str.length() <= 3) return str;
