@@ -28,13 +28,29 @@ public class MainClass {
 		System.out.println(doubleX("axaxbb"));
 		System.out.println(doubleX("aaax"));
 	}
+	
+	
+	
+	public static int arrayCount9(int[] nums)
+	{
+		int count = 0;
+		for( int a : nums)
+		{
+			if(a == 9) count++;
+		}
+		
+		return count;
+	}
+	
+	
 	public static boolean doubleX2(String str)
 	{
 		for(int i=0; i<str.length()-1; i++)
 		{
 			if(str.substring(i).equals("x"))
 			{
-				if(i<str.length()-1) str.substring(i+1).equals("x") return true;
+				if(i<str.length()-1) 
+					if(str.substring(i+1).equals("x")) return true;
 			}
 		}
 		
