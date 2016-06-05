@@ -27,10 +27,46 @@ public class MainClass {
 		System.out.println(doubleX("axxbb"));
 		System.out.println(doubleX("axaxbb"));
 		System.out.println(doubleX("aaax"));
+		
+		
+		System.out.println(stringMatch("xxcaazz","xxbaaz"));
+	}
+	
+	public static int stringMatch(String a, String b)
+	{
+		int count = 0;
+		int length = a.length() > b.length() ? b.length():a.length();
+		for(int i=0; i<length-1; i++)
+		{
+			System.out.println(a.substring(i, i+2));
+			if(a.substring(i, i+1).equalsIgnoreCase(b.substring(i, i+1)))count++;
+		}
+		
+		return count;
+	}
+	
+	public static boolean array123(int[] nums)
+	{
+		boolean satu=false,dua=false,tiga = false;
+		for(int a:nums)
+		{
+			if(a == 1)satu = true;
+			else if(a == 2) dua = true;
+			else if(a == 3) tiga = true;			
+		}
+		return satu && dua && tiga;
 	}
 	
 	
-	
+	public static boolean arrayFront9(int[] nums)
+	{
+		for(int i=0; i<nums.length; i++)
+		{
+			if (i > 3)break;
+			if (nums[i] == 9) return true;
+		}
+		return false;
+	}
 	public static int arrayCount9(int[] nums)
 	{
 		int count = 0;
