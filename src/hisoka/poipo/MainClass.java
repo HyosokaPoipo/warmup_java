@@ -6,7 +6,7 @@ public class MainClass {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		//Reverse string
-		System.out.println(frontBack("Hellow Hyosoka"));
+		/*System.out.println(frontBack("Hellow Hyosoka"));
 		
 		//frontBack string
 		System.out.println(frontBack1("Hisoka"));
@@ -29,7 +29,30 @@ public class MainClass {
 		System.out.println(doubleX("aaax"));
 		
 		
-		System.out.println(stringMatch("xxcaazz","xxbaaz"));
+		System.out.println(stringMatch("xxcaazz","xxbaaz"));*/
+		
+		System.out.println(factorial(3));
+	}
+	
+	public static int factorial(int n)
+	{
+		if(n == 1) return 1;
+		return n*factorial(n-1);
+	}
+	
+	
+	public static String stringX(String str)
+	{
+		if(str.charAt(0) == 'x' && str.charAt(str.length()-1) == 'x')
+		{
+			return "x"+str.replace("x","")+"x";
+		}else if(str.contains("x"))
+		{
+			return str.replace("x", "");
+		}else
+		{
+			return str;
+		}
 	}
 	
 	public static int stringMatch(String a, String b)
@@ -39,7 +62,7 @@ public class MainClass {
 		for(int i=0; i<length-1; i++)
 		{
 			System.out.println(a.substring(i, i+2));
-			if(a.substring(i, i+1).equalsIgnoreCase(b.substring(i, i+1)))count++;
+			if(a.substring(i, i+2).equalsIgnoreCase(b.substring(i, i+2)))count++;
 		}
 		
 		return count;
