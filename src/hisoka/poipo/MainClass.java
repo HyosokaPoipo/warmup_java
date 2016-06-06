@@ -34,6 +34,43 @@ public class MainClass {
 		System.out.println(factorial(3));
 		
 		System.out.println(fibonacci(3));
+		
+		System.out.println(bunnyEars2(2));
+		
+		System.out.println(sumDigits(12));
+	}
+	
+	
+	
+	public static int count7(int n) {		  
+	  if(n<10 && n == 7) return 1;
+	  else if(n<10 && n!=7) return 0;
+	  else return count7(n%10)+count7(n/10);		  
+	}
+	
+	
+	public static int sumDigits(int n) {
+		 if(n < 10) return n;
+		 return n%10 + sumDigits(n/10);
+	}
+	
+	
+	public static int triangle(int rows)
+	{
+		if (rows == 0) return 0;
+		return 1+triangle(rows-1);
+	}
+	
+	public static int bunnyEars2(int n)
+	{
+		if (n == 0) return 0;
+		else if( n % 2 == 0)//genap
+		{
+			return 3+bunnyEars2(n-1);
+		}else
+		{
+			return 2+bunnyEars2(n-1);
+		}
 	}
 	
 	public static int fibonacci(int n)
