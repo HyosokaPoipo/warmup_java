@@ -32,9 +32,16 @@ public class MainClass {
 		System.out.println(stringMatch("xxcaazz","xxbaaz"));*/
 		
 		System.out.println(factorial(3));
+		
+		System.out.println(fibonacci(3));
 	}
 	
-	
+	public static int fibonacci(int n)
+	{
+		if(n == 0 || n == 1) return n;		
+		//if(n == 2) return 1;
+		return fibonacci(n-1)+fibonacci(n-2);
+	}
 	
 	public static int bunnyEars(int bunnies) {
 		  // Base case: if bunnies==0, just return 0.
