@@ -34,6 +34,18 @@ public class MainClass {
 		System.out.println(factorial(3));
 	}
 	
+	
+	
+	public static int bunnyEars(int bunnies) {
+		  // Base case: if bunnies==0, just return 0.
+		  if (bunnies == 0) return 0;
+		  
+		  // Recursive case: otherwise, make a recursive call with bunnies-1
+		  // (towards the base case), and fix up what it returns.
+		  return 2 + bunnyEars(bunnies-1);
+		}
+	
+	
 	public static int factorial(int n)
 	{
 		if(n == 1) return 1;
