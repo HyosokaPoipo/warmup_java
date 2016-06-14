@@ -30,7 +30,7 @@ public class MainClass {
 		
 		
 		System.out.println(stringMatch("xxcaazz","xxbaaz"));*/
-		
+		/*
 		System.out.println(factorial(3));
 		
 		System.out.println(fibonacci(3));
@@ -41,6 +41,52 @@ public class MainClass {
 		
 		System.out.println(count8(8818));
 		System.out.println(count8(8088));
+		int[] A ;
+		*/
+	    //System.arraycopy(src, srcPos, dest, destPos, length);
+		
+		System.out.println("countX : "+countX("xxhixx"));
+	}
+	
+	public static int countX(String str)
+	{
+		if (str.length() == 0) return 0;
+		if(str.charAt(str.length()-1) == 'x') return 1+countX(str.substring(0, str.length()-1));
+		return countX(str.substring(0, str.length()-1));
+	}
+	
+	
+	public int itung2(int[]b)
+	{
+		int count = 0;
+		boolean temp=false;
+		for(int i=0; i<b.length; i++)
+		{
+			if(b[i] == 1)temp = temp==true? false:true;
+			if(temp) count++;
+		}
+		
+		return count;
+	}
+	
+	public int itung(int[] a)
+	{ 
+		int hasil = 0;
+		if(a.length < 1) return 0;
+		for(int i = 0; i<a.length; i++)
+		{
+			if(a[i] == 1)
+			{
+				for(int j=i; j<a.length; j++) 
+				{	if(a[j] == 0) hasil++;
+					else if(a[j] == 1) break;
+					else hasil = 0;						
+				}	
+			}
+		}
+		
+		
+		return hasil;
 	}
 	
 	public static int count8(int n) {
