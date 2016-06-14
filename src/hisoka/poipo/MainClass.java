@@ -45,8 +45,19 @@ public class MainClass {
 		*/
 	    //System.arraycopy(src, srcPos, dest, destPos, length);
 		
-		System.out.println("countX : "+countX("xxhixx"));
+		//System.out.println("countX : "+countX("xxhixx"));
 	}
+	
+	public static String countXY(String str)
+	{
+		if(str.length() < 0) return "";
+		char temp = str.charAt(str.length()-1);
+		if(temp == 'x') temp = 'y';
+		return temp +countXY(str.substring(0,str.length()-1));
+	}
+	
+	
+	
 	
 	public static int countX(String str)
 	{
