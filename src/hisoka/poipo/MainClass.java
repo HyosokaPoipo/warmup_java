@@ -1,5 +1,7 @@
 package hisoka.poipo;
 
+import java.util.Arrays;
+
 public class MainClass {
 	public static HisokaString HS;
 
@@ -46,8 +48,28 @@ public class MainClass {
 	    //System.arraycopy(src, srcPos, dest, destPos, length);
 		
 		//System.out.println("countX : "+countX("xxhixx"));
-		System.out.println("countX : "+changePi("xxpixx"));
+		//System.out.println("countX : "+changePi("xxpixx"));
+		int[] A = {1, 9, 4, 6, 6};
+		System.out.println("array6 : "+array6(A,0));
 	}
+	
+	public static boolean array6(int[] nums, int index)
+	{
+		//Stop condition
+		if(nums.length == 0) return false;
+		if(nums.length == 1)
+		{
+			if(nums[0]== 6) return true;
+			else return false;
+		}
+		
+		//Main process
+		if(nums[index] == 6) return true;
+		int[] temp = Arrays.copyOfRange(nums, index+1, nums.length);
+        
+		return array6(temp,index);
+	}
+	
 	
 	public static String changePi(String str)
 	{
@@ -328,5 +350,20 @@ public class MainClass {
 	{
 		return new StringBuilder(input).reverse().toString();
 	}
+	
+	//UTILITY METHOD
+	public static void displayArray(int[] A)
+		{
+			for (int a: A)
+			{
+				System.out.print(a+" ");
+			}
+				System.out.print("\n");
+		}
+
+	public static void printMessage(String mess)
+		{
+			System.out.println(mess);
+		}
 
 }
