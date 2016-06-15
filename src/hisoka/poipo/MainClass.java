@@ -49,9 +49,27 @@ public class MainClass {
 		
 		//System.out.println("countX : "+countX("xxhixx"));
 		//System.out.println("countX : "+changePi("xxpixx"));
-		int[] A = {1, 9, 4, 6, 6};
-		System.out.println("array6 : "+array6(A,0));
+		
+		//int[] A = {1, 9, 4, 6, 6};
+		//System.out.println("array6 : "+array6(A,0));
 	}
+	
+	public static int array11(int[] nums, int index)
+	{
+		//Stop Condition
+		if(nums.length == 0 ) return 0;
+		if(nums.length == 1)
+		{
+			if(nums[0] == 11) return 1;
+			else return 0;
+		}
+		
+		//Main recursive process
+		int[] temp = Arrays.copyOfRange(nums, index+1, nums.length);
+		if(nums[index] == 11) return 1+array11(temp,index);
+		else return array11(temp,index);
+	}
+	
 	
 	public static boolean array6(int[] nums, int index)
 	{
