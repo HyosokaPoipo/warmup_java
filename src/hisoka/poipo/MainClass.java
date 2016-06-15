@@ -46,7 +46,18 @@ public class MainClass {
 	    //System.arraycopy(src, srcPos, dest, destPos, length);
 		
 		//System.out.println("countX : "+countX("xxhixx"));
+		System.out.println("countX : "+changePi("xxpixx"));
 	}
+	
+	public static String changePi(String str)
+	{
+		if (str.length() < 1) return "";
+		int index = str.indexOf("pi");
+		if (index < 0) return str;
+		String temp = str.substring(0, index);
+		return temp+"3.14"+changePi(str.substring(index+2, str.length()));
+	}
+	
 	
 	public static String countXY(String str)
 	{
