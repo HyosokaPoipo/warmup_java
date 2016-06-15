@@ -54,6 +54,36 @@ public class MainClass {
 		//System.out.println("array6 : "+array6(A,0));
 	}
 	
+	public static String allStar(String str)
+	{
+		//Stop Condition
+		if(str.length()<1) return "";
+		if(str.length() == 1) return str+"*";
+		
+		
+		//Main recursive process
+		return str.charAt(0)+"*"+allStar(str.substring(1));
+	}
+	
+	
+	public static boolean array220(int[] nums, int index)
+	{
+		//Stop Condition
+		if(nums.length == 0 ) return false;
+		if(nums.length == 1)
+		{
+			if(nums[0]%10 == 0) return true;
+			else return false;
+		}
+		
+		
+		//Main recursive process
+		int[] temp = Arrays.copyOfRange(nums, index+1, nums.length);
+		if(nums[index]%10 == 0) return true;
+		else return array220(temp,index);
+	}
+	
+	
 	public static int array11(int[] nums, int index)
 	{
 		//Stop Condition
